@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		33D6FDDAE668807609138301 /* Pods_MovieDBExpSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4C0C76398E7D28464CE842 /* Pods_MovieDBExpSwift.framework */; };
+		950E33F5280B600200EACBE9 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950E33F4280B600200EACBE9 /* MovieCell.swift */; };
 		9571FD0B280B53D9006BE966 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9571FD0A280B53D9006BE966 /* AppDelegate.swift */; };
 		9571FD0D280B53D9006BE966 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9571FD0C280B53D9006BE966 /* SceneDelegate.swift */; };
 		9571FD0F280B53D9006BE966 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9571FD0E280B53D9006BE966 /* MainVC.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		0182E0704EEAC8378A6F1069 /* Pods-MovieDBExpSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDBExpSwift.release.xcconfig"; path = "Target Support Files/Pods-MovieDBExpSwift/Pods-MovieDBExpSwift.release.xcconfig"; sourceTree = "<group>"; };
 		06EE1BB76108D26DDAD950CA /* Pods-MovieDBExpSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDBExpSwift.debug.xcconfig"; path = "Target Support Files/Pods-MovieDBExpSwift/Pods-MovieDBExpSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		950E33F4280B600200EACBE9 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		9571FD07280B53D9006BE966 /* MovieDBExpSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDBExpSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9571FD0A280B53D9006BE966 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9571FD0C280B53D9006BE966 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				9571FD0E280B53D9006BE966 /* MainVC.swift */,
+				950E33F4280B600200EACBE9 /* MovieCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			files = (
 				9571FD0F280B53D9006BE966 /* MainVC.swift in Sources */,
 				9571FD0B280B53D9006BE966 /* AppDelegate.swift in Sources */,
+				950E33F5280B600200EACBE9 /* MovieCell.swift in Sources */,
 				9571FD0D280B53D9006BE966 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

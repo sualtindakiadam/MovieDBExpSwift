@@ -26,7 +26,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         inputArray.append(AFURLSource(urlString: "https://image.tmdb.org/t/p/w300_and_h450_bestv2/x747ZvF0CcYYTTpPRCoUrxA2cYy.jpg")!)
     
         
-        let imageSlideShow = ImageSlideshow(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height * 0.35))
+        let imageSlideShow = ImageSlideshow(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 250))
         imageSlideShow.backgroundColor = UIColor.white
         imageSlideShow.contentScaleMode = UIViewContentMode.scaleAspectFill
         

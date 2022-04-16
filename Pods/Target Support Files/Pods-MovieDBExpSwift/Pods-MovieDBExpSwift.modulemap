@@ -1,0 +1,6 @@
+framework module Pods_MovieDBExpSwift {
+  umbrella header "Pods-MovieDBExpSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

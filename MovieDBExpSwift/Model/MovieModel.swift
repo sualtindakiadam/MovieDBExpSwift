@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct MovieModel{
+struct MovieModel : Decodable {
     
     //var dates: Array<Date>?
-    var dates: [Dates]?
+   // var dates: [Dates]?
     var page: Int?
     //var results: Array<AnyObject>?
-    var results: [Results]?
+   // var results: [Results]?
     var total_pages: Int?
     var total_results: Int?
     
@@ -27,12 +27,12 @@ struct MovieModel{
     
 }
 
-struct Dates {
+/*struct Dates : Decodable{
     var maximum : Date?
     var minimum : Date?
 }
 
-struct Results  : Identifiable {
+struct Results  : Identifiable : Decodable {
     var modelId = UUID()
     var adult : Bool?
     var backdrop_path : String?
@@ -50,3 +50,4 @@ struct Results  : Identifiable {
     var vote_count: Int?
 }
 
+*/

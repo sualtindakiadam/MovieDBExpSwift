@@ -16,6 +16,17 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("--------didload---------")
+
+        let url = URL(string : "https://api.themoviedb.org/3/movie/now_playing?api_key=8180ce56cfb81eb8a3b34550731c7a24&language=en-US&page=1")
+        WebService().getNowPlayingData(url: url!) { (modelLst) in
+            print("--------girdi---------")
+            if let modellst = modelLst {
+                print ("------yazdı -------")
+                print(modelLst)
+            }
+        }
+        
         
         tableView.delegate = self
         tableView.dataSource = self

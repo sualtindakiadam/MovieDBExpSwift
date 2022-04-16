@@ -6,17 +6,22 @@
 //
 
 import Foundation
-/*
+
 class WebService{
-    func getNowPlayingData(url: URL, completion: @escaping([NowPlayingData]?)->()){
+    func getNowPlayingData(url: URL, completion: @escaping([MovieModel]?)->()){
+        
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
                 print(error.localizedDescription)
                 completion(nil)
             }else if let data = data {
-                JSONDecoder().decode(NowPla, from: <#T##Data#>)
+                let movieList = try? JSONDecoder().decode([MovieModel].self, from: data)
+                
+                if let movieList = movieList {
+                    completion(movieList)
+                }
             }
-        }
+        }.resume()
     }
 }
-*/
+

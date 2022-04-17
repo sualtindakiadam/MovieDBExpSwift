@@ -16,7 +16,7 @@ struct MovieListVM {
     
     func movieAtIndex(_ index: Int) -> MovieVM{
         let nowPlaying = self.movieList[index]
-        return MovieVM(nowPlaying: nowPlaying)
+        return MovieVM(upComingPlaying: nowPlaying)
     }
     
     
@@ -24,15 +24,15 @@ struct MovieListVM {
 
 
 struct MovieVM {
-    var nowPlaying : Results
+    var upComingPlaying : Results
     
     var name : String? {
-        return nowPlaying.title
+        return upComingPlaying.title
     }
     var description : String? {
-        return nowPlaying.overview
+        return upComingPlaying.overview
     }
     var image : String? {
-        return nowPlaying.poster_path
+        return upComingPlaying.poster_path
     }
 }

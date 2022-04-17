@@ -1,5 +1,5 @@
 //
-//  NowPlayingModel.swift
+//  MovieModel.swift
 //  MovieDBExpSwift
 //
 //  Created by Semih Kalaycı on 17.04.2022.

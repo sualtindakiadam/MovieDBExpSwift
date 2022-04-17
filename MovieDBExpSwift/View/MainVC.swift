@@ -68,11 +68,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 
                 self.nowPlayigListViewModel = NowPlayingMovieListVM(nowPlayingMovieList: nowPlayingMovies)
                 
-               // let upcomingMovie = self.movieListViewModel.movieAtIndex(indexPath.row)
-
-                
-               // var imageString = "https://image.tmdb.org/t/p/w300_and_h450_bestv2" + (nowPlayingMovies. ?? "")
-                //var imageURL = URL(string : imageString)
+         
                 
                 for imageStr in  nowPlayingMovies{
                     print("-----------------")
@@ -132,6 +128,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                    if let imageData = try? Data(contentsOf: imageURL!) {
                        if let loadedImage = UIImage(data: imageData) {
                            cell.upcomingImage.image = loadedImage
+                           //cell.upcomingImage.layer.cornerRadius = 5
                        }
                    }
         }

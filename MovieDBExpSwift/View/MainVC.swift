@@ -48,7 +48,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func initslideShow (){
         let imageSlideShow = ImageSlideshow(frame: CGRect(x: 0, y:0, width: self.view.frame.width, height: 250))
         imageSlideShow.backgroundColor = UIColor.white
-        imageSlideShow.contentScaleMode = UIViewContentMode.scaleAspectFill
+        imageSlideShow.contentScaleMode = UIViewContentMode.redraw
         imageSlideShow.setImageInputs(inputArray)
         self.view.addSubview(imageSlideShow)
     }
@@ -89,7 +89,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func getUpcomingData(){
         
-        //let url = URL(string : "https://api.themoviedb.org/3/movie/now_playing?api_key=8180ce56cfb81eb8a3b34550731c7a24&language=en-US&page=1")
+
         let url = URL(string : "https://api.themoviedb.org/3/movie/upcoming?api_key=8180ce56cfb81eb8a3b34550731c7a24&language=en-US&page=1")
 
         
@@ -122,6 +122,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let upcomingMovie = self.movieListViewModel.movieAtIndex(indexPath.row)
         cell.upcomingTitle.text = upcomingMovie.name
         cell.upcomingDescription.text = upcomingMovie.description
+        cell.upcomingDate.text = upcomingMovie.upComingPlaying.release_date
         var imageString = "https://image.tmdb.org/t/p/w300_and_h450_bestv2" + (upcomingMovie.image ?? "")
         var imageURL = URL(string : imageString)
         DispatchQueue.main.async { [weak self] in

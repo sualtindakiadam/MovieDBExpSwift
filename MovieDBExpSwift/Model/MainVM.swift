@@ -35,4 +35,7 @@ struct MovieVM {
     var image : String? {
         return upComingPlaying.poster_path
     }
+    var date : String?{
+        return upComingPlaying.release_date
+    }
 }

@@ -27,9 +27,12 @@ struct MovieVM {
     var nowPlaying : Results
     
     var name : String? {
-        return nowPlaying.original_title
+        return nowPlaying.title
     }
     var description : String? {
         return nowPlaying.overview
+    }
+    var image : String? {
+        return nowPlaying.poster_path
     }
 }

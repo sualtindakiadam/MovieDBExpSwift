@@ -75,6 +75,17 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         let upcomingMovie = self.movieListViewModel.movieAtIndex(indexPath.row)
         cell.upcomingTitle.text = upcomingMovie.name
+        cell.upcomingDescription.text = upcomingMovie.description
+        var imageString = "https://image.tmdb.org/t/p/w300_and_h450_bestv2" + (upcomingMovie.image ?? "")
+        var imageURL = URL(string : imageString)
+        DispatchQueue.main.async { [weak self] in
+                   if let imageData = try? Data(contentsOf: imageURL!) {
+                       if let loadedImage = UIImage(data: imageData) {
+                           cell.upcomingImage.image = loadedImage
+                       }
+                   }
+        }
+
         return cell
     }
     

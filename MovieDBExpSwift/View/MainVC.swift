@@ -22,6 +22,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var chosenMovieDescription = ""
     var chosenMovieImageUrl = ""
+    var chosenMovieTitle = ""
+    var chosenMovieIMDBScore = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         getUpcomingData()
         getNowPlayingData()
+        
+        
         inputArray.append(AFURLSource(urlString: "https://image.tmdb.org/t/p/w300_and_h450_bestv2/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg")!)
         inputArray.append(AFURLSource(urlString: "https://image.tmdb.org/t/p/w300_and_h450_bestv2/x747ZvF0CcYYTTpPRCoUrxA2cYy.jpg")!)
         
@@ -142,6 +146,11 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
         chosenMovieDescription = choosenMovie.description!
         chosenMovieImageUrl = choosenMovie.image!
+        chosenMovieTitle = choosenMovie.name!
+        chosenMovieIMDBScore =  "\(NSString(format: "%.1f",choosenMovie.imdbScore!))/10       \(choosenMovie.date ?? "")"
+        
+        
+       
 
         
         performSegue(withIdentifier: "toDetailVC", sender: nil)
@@ -153,6 +162,9 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             let destinationVC = segue.destination as! DetailVC
             destinationVC.selectedMovieDescription = chosenMovieDescription
             destinationVC.selectedMovieImageURL = chosenMovieImageUrl
+            destinationVC.selectedMovieTitle = chosenMovieTitle
+            destinationVC.selectedMovieIMDBScore = chosenMovieIMDBScore
+            
         }
     }
     

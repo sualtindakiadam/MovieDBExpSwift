@@ -38,4 +38,7 @@ struct MovieVM {
     var date : String?{
         return upComingPlaying.release_date
     }
+    var imdbScore : Float?{
+        return upComingPlaying.vote_average
+    }
 }

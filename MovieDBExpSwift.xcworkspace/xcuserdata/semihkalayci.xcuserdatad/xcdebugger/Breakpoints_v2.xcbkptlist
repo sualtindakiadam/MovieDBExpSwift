@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D7EA5EF8-FF8F-432B-9C3C-CE47EA8E748E"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B1BD11B3-354F-4449-B090-41360F46958F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieDBExpSwift/Model/MovieModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "MovieModel"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E832E7DF-F986-4682-95E2-6CAD9B2819E8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieDBExpSwift/Model/MovieModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "MovieModel"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "E832E7DF-F986-4682-95E2-6CAD9B2819E8 - ce5fd8fc5ea3953e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieDBExpSwift.MovieModel.init() -&gt; MovieDBExpSwift.MovieModel"
+                  moduleName = "MovieDBExpSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/semihkalayci/Desktop/GitHub/MovieDBExpSwift/MovieDBExpSwift/Model/MovieModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "224">
+               </Location>
+               <Location
+                  uuid = "E832E7DF-F986-4682-95E2-6CAD9B2819E8 - 73d88c0c4f37e4da"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieDBExpSwift.MovieModel.init(dates: Swift.Optional&lt;MovieDBExpSwift.Dates&gt;, page: Swift.Optional&lt;Swift.Int&gt;, results: Swift.Optional&lt;Swift.Array&lt;MovieDBExpSwift.Results&gt;&gt;, total_pages: Swift.Optional&lt;Swift.Int&gt;, total_results: Swift.Optional&lt;Swift.Int&gt;) -&gt; MovieDBExpSwift.MovieModel"
+                  moduleName = "MovieDBExpSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/semihkalayci/Desktop/GitHub/MovieDBExpSwift/MovieDBExpSwift/Model/MovieModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "43">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "34B4D2AD-1E5C-4693-A8E7-89A581FCE12F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieDBExpSwift/Service/WebService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "getNowPlayingData(url:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

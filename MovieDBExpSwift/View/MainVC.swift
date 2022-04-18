@@ -14,7 +14,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
 
     
-    private var movieListViewModel: MovieListVM!
+    private var movieListViewModel: UpComingListVM!
     private var nowPlayigListViewModel: NowPlayingMovieListVM!
 
     
@@ -34,11 +34,6 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         getUpcomingData()
         getNowPlayingData()
         
-        
-        
-        
-       
-       
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.initslideShow()
@@ -104,7 +99,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         WebService().getNowPlayingData(url: url!) { (movies) in
             if let movies = movies?.results {
                 
-                self.movieListViewModel = MovieListVM(movieList: movies)
+                self.movieListViewModel = UpComingListVM(movieList: movies)
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -151,11 +146,16 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         chosenMovieDescription = choosenMovie.description!
         chosenMovieImageUrl = choosenMovie.image!
         chosenMovieTitle = choosenMovie.name!
-        chosenMovieIMDBScore =  "\(NSString(format: "%.1f",choosenMovie.imdbScore!))/10    \(choosenMovie.date ?? "")"
+        //var imdbStr = NSString(format: "%.1f", choosenMovie.imdbScore ?? 1.0) ?? ""
         
+        if  choosenMovie.imdbScore != nil {
+            
+            var imdbStr = NSString(format: "%.1f", choosenMovie.imdbScore!)
+            chosenMovieIMDBScore =  "\(imdbStr)/10    \(choosenMovie.date!)"
+        }else{
+            chosenMovieIMDBScore =  "-  \(choosenMovie.date!)"
+        }
         
-       
-
         
         performSegue(withIdentifier: "toDetailVC", sender: nil)
         

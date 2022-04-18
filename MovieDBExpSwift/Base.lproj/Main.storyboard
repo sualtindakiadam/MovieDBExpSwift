@@ -19,6 +19,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EpY-xl-Ziz">
                                 <rect key="frame" x="0.0" y="250" width="414" height="612"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="612" id="dQW-XF-1mp"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="167" id="q2c-GT-90G" customClass="MovieCell" customModule="MovieDBExpSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="167"/>
@@ -87,14 +90,24 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3K-mF-BwT">
+                                <rect key="frame" x="20" y="36" width="374" height="206"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="206" id="cxS-kg-wfI"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="EpY-xl-Ziz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="250" id="99E-Kf-Vvx"/>
-                            <constraint firstItem="EpY-xl-Ziz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JMN-Jv-V1j"/>
-                            <constraint firstItem="EpY-xl-Ziz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="he9-WF-DBG"/>
-                            <constraint firstItem="EpY-xl-Ziz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sNl-VH-LRd"/>
+                            <constraint firstItem="g3K-mF-BwT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2mh-1G-fz7"/>
+                            <constraint firstItem="g3K-mF-BwT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-52" id="3h4-VA-Yce"/>
+                            <constraint firstItem="EpY-xl-Ziz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AYa-ZM-QVs"/>
+                            <constraint firstItem="g3K-mF-BwT" firstAttribute="centerX" secondItem="EpY-xl-Ziz" secondAttribute="centerX" id="VJj-an-rZk"/>
+                            <constraint firstItem="EpY-xl-Ziz" firstAttribute="top" secondItem="g3K-mF-BwT" secondAttribute="bottom" constant="8" symbolic="YES" id="ozZ-wo-qaH"/>
+                            <constraint firstAttribute="trailing" secondItem="EpY-xl-Ziz" secondAttribute="trailing" id="u9X-mh-Wgy"/>
+                            <constraint firstItem="EpY-xl-Ziz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wkp-LR-23R"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZX9-4l-abF"/>

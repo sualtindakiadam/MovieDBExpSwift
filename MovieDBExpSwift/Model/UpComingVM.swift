@@ -7,23 +7,23 @@
 
 import Foundation
 
-struct MovieListVM {
+struct UpComingListVM {
     var movieList : [Results]
     
     func numberOfRowsInSection() ->Int {
         return self.movieList.count
     }
     
-    func movieAtIndex(_ index: Int) -> MovieVM{
+    func movieAtIndex(_ index: Int) -> UpComingVM{
         let nowPlaying = self.movieList[index]
-        return MovieVM(upComingPlaying: nowPlaying)
+        return UpComingVM(upComingPlaying: nowPlaying)
     }
     
     
 }
 
 
-struct MovieVM {
+struct UpComingVM {
     var upComingPlaying : Results
     
     var name : String? {

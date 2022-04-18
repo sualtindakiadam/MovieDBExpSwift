@@ -38,8 +38,7 @@ class DetailVC: UIViewController {
         if let imageData = try? Data(contentsOf: imageURL!) {
             if let loadedImage = UIImage(data: imageData) {
                 detailImageView.image = loadedImage
-                detailImageView.contentMode = UIViewContentMode.redraw
-                
+                                
             }
         }
 

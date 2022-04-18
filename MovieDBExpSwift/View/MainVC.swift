@@ -35,13 +35,16 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         getNowPlayingData()
         
         
-        inputArray.append(AFURLSource(urlString: "https://image.tmdb.org/t/p/w300_and_h450_bestv2/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg")!)
-        inputArray.append(AFURLSource(urlString: "https://image.tmdb.org/t/p/w300_and_h450_bestv2/x747ZvF0CcYYTTpPRCoUrxA2cYy.jpg")!)
         
         
-       initslideShow()
-                     
-        //self.view.bringSubviewToFront(T##view: UIView##UIView) //önde gösterilmek istenirse bir şey
+       
+       
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.initslideShow()
+        }
+        
+
         
         
     }
@@ -79,7 +82,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     print(imageStr.poster_path)
                     var imageString = "https://image.tmdb.org/t/p/w300_and_h450_bestv2" + (imageStr.poster_path ?? "")
                     self.inputArray.append(AFURLSource(urlString: imageString)!)
-
+                
+                    
                 }
                 
           
@@ -147,7 +151,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         chosenMovieDescription = choosenMovie.description!
         chosenMovieImageUrl = choosenMovie.image!
         chosenMovieTitle = choosenMovie.name!
-        chosenMovieIMDBScore =  "\(NSString(format: "%.1f",choosenMovie.imdbScore!))/10       \(choosenMovie.date ?? "")"
+        chosenMovieIMDBScore =  "\(NSString(format: "%.1f",choosenMovie.imdbScore!))/10    \(choosenMovie.date ?? "")"
         
         
        

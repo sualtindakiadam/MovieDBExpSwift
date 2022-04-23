@@ -38,15 +38,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.initslideShow()
         }
-        
-
-        
-        
     }
-    
-    
-    
-    
     func initslideShow (){
         let imageSlideShow = ImageSlideshow(frame: CGRect(x: 0, y:0, width: self.view.frame.width, height: 250))
         imageSlideShow.backgroundColor = UIColor.white
@@ -54,13 +46,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         imageSlideShow.setImageInputs(inputArray)
         self.view.addSubview(imageSlideShow)
     }
-    
 
-    
-
-    
-    
-    
     func getNowPlayingData(){
         
         let url = URL(string : "https://api.themoviedb.org/3/movie/now_playing?api_key=8180ce56cfb81eb8a3b34550731c7a24&language=en-US&page=1")
@@ -70,21 +56,13 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 
                 self.nowPlayigListViewModel = NowPlayingMovieListVM(nowPlayingMovieList: nowPlayingMovies)
                 
-         
-                
                 for imageStr in  nowPlayingMovies{
-                    print("-----------------")
-                    print(imageStr.poster_path)
+
                     var imageString = "https://image.tmdb.org/t/p/w300_and_h450_bestv2" + (imageStr.poster_path ?? "")
                     self.inputArray.append(AFURLSource(urlString: imageString)!)
-                
-                    
-                }
-                
-          
  
-  
-                print(nowPlayingMovies)
+                }
+
             }
         }
         
@@ -105,7 +83,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     self.tableView.reloadData()
                 }
                 
-                print(movies)
+
             }
         }
         
@@ -132,7 +110,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                    if let imageData = try? Data(contentsOf: imageURL!) {
                        if let loadedImage = UIImage(data: imageData) {
                            cell.upcomingImage.image = loadedImage
-                           //cell.upcomingImage.layer.cornerRadius = 5
+                    
                        }
                    }
         }
@@ -146,7 +124,6 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         chosenMovieDescription = choosenMovie.description!
         chosenMovieImageUrl = choosenMovie.image!
         chosenMovieTitle = choosenMovie.name!
-        //var imdbStr = NSString(format: "%.1f", choosenMovie.imdbScore ?? 1.0) ?? ""
         
         if  choosenMovie.imdbScore != nil {
             

@@ -30,8 +30,6 @@ class DetailVC: UIViewController {
         detailIMDBScoreLabel.text = selectedMovieIMDBScore
 
 
-
-        
         var imageString = "https://image.tmdb.org/t/p/w300_and_h450_bestv2" + (selectedMovieImageURL ?? "")
         var imageURL = URL(string : imageString)
         

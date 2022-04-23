@@ -15,23 +15,12 @@ struct MovieModel : Codable {
     var total_pages : Int?
     var total_results : Int?
 
-    /*let currency : String
-    let price : String*/
-    
+
     init(dict : [String:Any]){
-        /*guard let dates = dict["dates"] as? Dates else { return nil }
-        guard let page = dict["page"] as? Int else { return nil }
-        guard let results = dict["results"] as? [Results] else { return nil }
-        guard let total_pages = dict["total_pages"] as? Int else { return nil }
-        guard let total_results = dict["total_results"] as? Int else { return nil }
-*/
-        
-        //dates = dict["dates"] as? Dates
+
         dates = Dates(dict: dict["dates"] as? [String : Any] )
 
         page = dict["page"] as? Int
-        //results = Results(dict: dict["results"] as? [String : Any])
-        
         
         if let results = dict["results"] as? [[String : Any]]{
             
@@ -53,7 +42,6 @@ struct MovieModel : Codable {
 }
 
 
-
 struct Dates : Codable
 {
     var maximum : String?
@@ -63,11 +51,7 @@ struct Dates : Codable
 
         maximum = dict?["maximum"] as? String
         minimum = dict?["minimum"] as? String
-
-
-    }
-    
-    
+    }  
 }
 struct Results  : Codable  {
     var adult : Bool?
